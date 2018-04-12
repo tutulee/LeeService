@@ -70,24 +70,24 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="service">
-						<div class="service-design">
+						<div class="service-text-right">
 							<h3>Design</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 								empor incididunt ut labore et dolore magna aliqua.
 							</p>
 						</div>
-						<div class="service-icon">
+						<div class="service-icon icon-right">
 							<i class="fa fa-diamond"></i>
 						</div>
 					</div>
-					<div class="service-item text-right wow fadeInUp" data-wow-delay="0.1s">
-						<div class="service-text">
+					<div class="service">
+						<div class="service-text-right">
 							<h3>Coding</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 								empor incididunt ut labore et dolore magna aliqua.
 							</p>
 						</div>
-						<div class="service-icon">
+						<div class="service-icon icon-right">
 							<i class="fa fa-code"></i>
 						</div>
 					</div>
@@ -96,39 +96,54 @@
 					<img src="img/phone.png" alt="Phone" />
 				</div>
 				<div class="col-md-4">
-					<div class="service-item text-left wow fadeInUp">
-						<div class="service-text">
+					<div class="service">
+						<div class="service-text-left">
 							<h3>Photography</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 								empor incididunt ut labore et dolore magna aliqua. 
 							</p>
 						</div>
-						<div class="service-icon">
+						<div class="service-icon icon-left">
 							<i class="fa fa-camera"></i>
 						</div>
 					</div>
-					<div class="service-item text-left wow fadeInUp" data-wow-delay="0.1s">
-						<div class="service-text">
+					<div class="service">
+						<div class="service-text-left">
 							<h3>Apps</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 								empor incididunt ut labore et dolore magna aliqua.
 							</p>
 						</div>
-						<div class="service-icon">
+						<div class="service-icon icon-left">
 							<i class="fa fa-cubes"></i>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="video-wrapper clearfix">
-		<div class="col-md-offset-1 col-md-10 video">
-			<a href="https://www.youtube.com/watch?v=CnYtWWDor2s" id="popup-youtube" class="circled fa fa-play" ></a>
-			<h3>Play video and be amazed</h3>
-			<p>Than lovely frames</p>
-		</div>
-	</div>
+	<!--<div class="video-wrapper clearfix container-fluid">-->
+			<!--<div class="col-xs-10 col-xs-offset-1 video">-->
+				<!--<a href="https://www.youtube.com/watch?v=CnYtWWDor2s" id="popup-youtube" class="circled fa fa-play" ></a>-->
+				<!--<h3>Play video and be amazed</h3>-->
+				<!--<p>Than lovely frames</p>-->
+			<!--</div>-->
+		<!--</div>-->
+
+	<!--</div>-->
+			<div class="container-fluid video-wrapper">
+				<div class="row">
+					<div class="col-xs-1"></div>
+					<div class="col-xs-10 video">
+						<video src="../img/video/birds.mp4"  id= "video" class="video-src">
+							你的浏览器不支持VIDEO
+						</video>
+
+						<span href="#" id="popup" class="circled fa fa-play" ></span>
+						<h3>Play video and be amazed</h3>
+						<p>Than lovely frames</p>
+					</div>
+				</div>
+			</div>
 </section>
 <!-- End services section -->
 <!-- Start portfolio section -->
@@ -427,6 +442,7 @@
 		 
 		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
+	    <script type="application/javascript" src="js/service.js"></script>
 	</body>
 
 </html>

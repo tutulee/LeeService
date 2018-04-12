@@ -6,6 +6,12 @@ body{
     color: #8e8e8e;
     font-family: 'Raleway', sans-serif;
 }
+*{
+	box-sizing: border-box;
+}
+a{
+	text-decoration:none;
+}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: inherit;
     font-weight: 500;
@@ -49,15 +55,30 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-top:80px;
 	margin-bottom:80px;
 	position: relative;
+	visibility: visible;
 }
-.service-design{
+.icon-right{
+	position: absolute;
+	top:-20px;
+	right:-10px
+}
+.icon-left{
+	position: absolute;
+	top:-20px;
+	left: -10px;
+}
+.service-text-right{
 	margin-right: 100px;
 	text-align: right;
 }
+.service-text-left{
+	margin-left:100px;
+	text-align: left;
+}
 .service-icon{
-	display: block;
-	width:80px;
-	height:80px;
+
+	width:75px;
+	height:75px;
 	background: #000;
 	border:1px;
 	border-radius : 50%;
@@ -66,5 +87,35 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight: bold;
 	font-size: 25px;
 	text-align: center;
-	
+
+}
+/*这里是video css*/
+.video-wrapper{
+	background: url("../img/video-bg.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.video{
+	background: rgba(39, 40, 43, 0.8);
+	margin:100px 0px;
+	text-align: center;
+	padding-top:100px;
+	color:#FFFFFF;
+
+}
+.video-src{
+	display: none;
+}
+.circled{
+	font-size: 35px;
+	color:#fff;
+	display:inline-block;
+	width:75px;
+	height:75px;
+	border:1px;
+	line-height: 75px;
+	border-radius: 100%;
+	background: #fa5c58;
+    text-decoration: none;
+	padding-right: -6px;
 }
