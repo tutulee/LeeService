@@ -1,14 +1,17 @@
 /**
  * Created by lijiangyuan on 2018/4/13.
  */
-$("#video a").click(function(e){
-    e.preventDefault();
-    if(video.paused()){
-        $('#video a').className= "circled fa fa-play";
-        video.play();
-    }else{
-        $('#video a').className= "circled fa fa-pause";
-        $('#video').style.display = "show";
-        video.pause()
-    }
-})
+
+function btn(){
+    var zhezhao=document.getElementById("zhezhao");
+    var h = document.documentElement.scrollHeight;
+    zhezhao.style.height=h+"px";
+    $('#zhezhao').show();
+    video.play();
+}
+  $('#video-close').click(function(){
+      $('#zhezhao').hide();
+      video.pause();
+
+  })
+
