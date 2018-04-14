@@ -1,52 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style type="text/css">
-		.insert{
-			position: relative;
-			z-index:100;
-			background: green;
-			width:300px;
-			height:300px;
-			top:100px;
-		}
-		.parent{
-			/*position:relative;
-            z-index: 1000;*/
-			width:200px;
-			height:200px;
-			/*left:0;
-            top:-50px;*/
-			border:1px solid #eee;
-		}
-		.subbottom{
-			position:relative;
-			z-index: 50;
-			width:200px;
-			height:200px;
-			background: red;
-			top:-100px;
-			left:0;
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<script>
+		window.onload = function(){
+			var oBox1 = document.getElementById("box1")
+			var oBox2 = document.getElementById("box2")
+
+			oBox1.onmouseover = function(e){ // mouseenter // onmouseover
+				e = e||window.event
+				target = e.target || e.srcElement
+
+				if(target.className=="a"){
+					//alert("a")
+					target.style.background = "red"
+				}else if(target.className=="b"){
+					//alert("b")
+					target.style.background = "blue"
+				}else if(target.className=="c"){
+					//alert("c")
+					target.style.background = "pink"
+				}
+
+			}
+			oBox1.onmouseout = function(e){ // mouseleave // onmouseout
+				e = e||window.event
+				target = e.target || e.srcElement
+				if(target.className=="a"){
+					//alert("a")
+					target.style.background = ""
+				}else if(target.className=="b"){
+					//alert("b")
+					target.style.background = ""
+				}else if(target.className=="c"){
+					//alert("c")
+					target.style.background = ""
+				}
+
+			}
+
+			/*
+			 1. 鼠标移入指定事件源,对应触发颜色设置。
+			 2. 鼠标移入子元素，会触发父元素的 onmouseout 事件。
+			 3. // 如何解决???
+
+			 */
+
+
+			/*
+			 mouseenter 替代 onmouseover
+			 mouseleave 替代  onmouseout
+			 // 无效!!
+			 */
+			oBox2.mouseenter = function(e){ // mouseenter // onmouseover
+				e = e||window.event
+				target = e.target || e.srcElement
+
+				if(target.className=="a"){
+					//alert("a")
+					target.style.background = "red"
+				}else if(target.className=="b"){
+					//alert("b")
+					target.style.background = "blue"
+				}else if(target.className=="c"){
+					//alert("c")
+					target.style.background = "pink"
+				}
+
+			}
+			oBox2.mouseleave = function(e){ // mouseleave // onmouseout
+				e = e||window.event
+				target = e.target || e.srcElement
+				if(target.className=="a"){
+					//alert("a")
+					target.style.background = ""
+				}else if(target.className=="b"){
+					//alert("b")
+					target.style.background = ""
+				}else if(target.className=="c"){
+					//alert("c")
+					target.style.background = ""
+				}
+
+			}
 
 		}
-		.subtop{
-			position: relative;
-			z-index:1100;
-			width:100px;
-			height:100px;
-			left:0;
-			top:0;
-			background: blue;
-		}
+	</script>
+
+	<style>
+		#box1,#box2{ width:300px; height:400px; border: solid 1px #333; background:#f1f1f1; float:left;}
+		.a,.b,.c{ width:60%; height:60%; border: solid 1px #333; margin:20px;}
+
+		.a{ background:#0C9;}
+		.b{ background:#FC6;}
+		.c{ background:#999;}
+
 	</style>
 </head>
+
 <body>
-<div class="insert"></div>
-<div class="parent">
-	<div class="subtop"></div>
-	<div class="subbottom"></div>
+<div id="box1">
+	<div class="a">
+		<div class="a">
+			<div class="a">
+				onmouseover / onmouseout
+			</div>
+		</div>
+	</div>
 </div>
+<div id="box2">
+	<div class="a">
+		<div class="b">
+			<div class="c">
+				mouseenter / mouseleave
+			</div>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
