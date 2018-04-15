@@ -24,6 +24,10 @@ ul,ol{
 	list-style: none;
 
 }
+.navbar-nav li:hover{
+   color:#fa5c58;
+	border:0;
+}
 .navbar-default .nav li a{
 	font-size: 14px;
 	text-transform: uppercase;
@@ -78,9 +82,9 @@ ul,ol{
 }
 .slide .container{
 	text-align: center;
-	width:500px;
+	width:100%;;
 	height:200px;
-    margin:-100px -250px;
+    margin:-100px -50%;
 	position: absolute;
 	left:50%;
 	top:50%;
@@ -246,6 +250,8 @@ section header{
 }
 .portfolio-item{
 	padding: 0;
+	max-width: 100%;
+	height: auto;
 	transition: all 1s;
 	-moz-transition: all 1s;
 	-webkit-transition: all 1s;
@@ -261,6 +267,10 @@ section header{
 	display: block;
 	opacity:0;
 }
+.cls{
+	height:0 !important;
+	width:0 !important;
+}
 .mask{
 	text-align:center;
 	margin: 0 15px;
@@ -273,7 +283,7 @@ section header{
 	color: #fa5c58;
 }
 .mix{
-	display: inline-block;
+	display: none;
 }
 /*关于section*/
 #about .baner{
